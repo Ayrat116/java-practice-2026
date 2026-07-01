@@ -78,7 +78,7 @@ public class UserConsoleOperations {
         }
     }
 
-    public void findUserBiId(){
+    private void findUserBiId(){
         System.out.println("Введите id:");
         String id = scanner.nextLine().trim();
         User user = userService.findById(id).get();
@@ -90,7 +90,7 @@ public class UserConsoleOperations {
         }
     }
 
-    public void updateProfileByEmail(){
+    private void updateProfileByEmail(){
         System.out.println("Введите email пользователя, данные которого хотите обновить:");
         String email = scanner.nextLine().trim();
         Optional<User> found = userService.findByEmail(email);
